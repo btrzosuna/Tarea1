@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  <head>
+    <meta name="description" content="">
+    <title>Pokemones</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album-rtl/">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        .py-5{
+            background-color: rgba(126, 237, 233, 0.148);
+            padding: 2px;
+        }
+        .letra{
+            font-family: fantasy;
+        }
+        letra:hover{
+            background-color: red;
+        }
+        .pieletra{
+            font-family: fantasy;
+            font-size: small;
+        }
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      /* #imagenprincipal{
+        border: dashed white 20px;
+        background-color: rgb(167, 167, 230); 
+      } 
+         */
+      
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      h3{
+        text-align: center;
+        background-color: rgb(186, 151, 151);
+        font-family: fantasy;
+        padding: 5px;
+        
+      }
+      .accordion-button:hover{
+        background-color: rgb(207, 151, 206);
+
+      }
+      
+      
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      
+      .accordion-body{
+        text-align: justify;
+      }
+
+      
+
+    
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      h5{
+        text-align: center;
+      }
+      .a:hover{
+        color: rgb(158, 90, 123);
+      }
+        
+      
+       </style>
+</head>
+  
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+ 
+    <!-- BARRA DE NAVEGACIÓN-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary letra ">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">Pokémones</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Agua</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Fuego</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Tierra</a>
+              </li>
+              
+              
+            </ul>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                No le piques a este botón
+              </button>
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Escribe" aria-label="Buscar">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+    <body>
+        <div class="alert alert-warning text-align center" role="alert" >
+            ¡Proximanmente se agregaran los pokémones de la nueva generación!         
+            
+              
+          </div>
+        <div class="py-5 text-center container">
+            <div>
+                <img id="imagenprincipal" src="https://i.pinimg.com/originals/54/f2/6b/54f26bea270ffdc9fd8a614c22d63970.jpg" class="img-fluid" alt="imagenprincipal" height="40px" width="900px">
+            </div>
+        </div>
+
+        
+            <main>
+
+              
+                <div class="album py-5 bg-body-tertiary">
+                  <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                      <div class="col ">
+                        
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center">
+                            <br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/12/Squirtle-Pokemon-Clip-Art-Transparent-PNG.png" alt="squirtle" height="100px" width="100px">
+                        <div class="card-body ">
+                            <h5>Squirtle</h5>
+                            <p class="card-text ">Cuando retrae su largo cuello en el caparazón, dispara agua a una presión increíble.</p><br><br>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group" id="liveAlertPlaceholder">
+                                
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+                              
+                            
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col ">
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center"><br>
+                          <img src="https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/6420b-pikachu-sentado-png.png?resize=800%2C800&ssl=1" alt="pikachu" height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5>Pikachu</h5>
+                            <p class="card-text ">Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de las bolsas de las mejillas</p>
+                            
+                            <br><div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="col ">
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center"><br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/10/Charmander-Pokemon-Free-PNG.png" alt="charmander" height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5 class="titulo">Charmander</h5>
+                            <p class="card-text ">Prefiere las cosas calientes. Dicen que cuando llueve le sale vapor de la punta de la cola.</p><br>
+                            <br><div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col ">
+                
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center"><br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/10/Caterpie-Pokemon-Free-PNG-Clip-Art.png" alt="caterpie " height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5>Caterpie</h5>
+                            <p class="card-text ">Para protegerse, despide un hedor horrible por las antenas con el que repele a sus enemigos.</p><br>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col ">
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center"><br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/10/Butterfree-Pokemon-Free-PNG-Clip-Art.png" alt="pikachu" height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5>Butterfree</h5>
+                            <p class="card-text ">Adora el néctar de las flores. Una pequeña cantidad de polen le basta para localizar prados floridos.</p><br>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col ">
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center"><br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/12/Weedle-Pokemon-Free-PNG.png" alt="pikachu" height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5>Weedle</h5> 
+                            <p class="card-text ">El aguijón de la cabeza es muy puntiagudo. Se alimenta de hojas oculto en la espesura de bosques y praderas.</p>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="col ">
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center">
+                            <br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/11/Rattata-Pokemon-PNG-Background.png" alt="pikachu" height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5>Rattata</h5>
+                            <p class="card-text ">Es propenso a hincar los incisivos en cualquier cosa que se le ponga por delante. Si se ve alguno, seguramente haya cuarenta cerca.</p>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="col ">
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center"><br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/11/Pidgey-Pokemon-Free-PNG.png" alt="pikachu" height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5>Pidgey</h5>
+                            <p class="card-text ">Su docilidad es tal que suelen defenderse levantando arena en lugar de contraatacar.
+                            </p><br>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="col ">
+                        <div class="card shadow-sm d-flex justify-content-center align-items-center"><br>
+                          <img src="https://www.pngplay.com/wp-content/uploads/10/Ekans-Pokemon-PNG-Background.png" alt="pikachu" height="100px" width="100px">
+                          <div class="card-body ">
+                            <h5>Ekans</h5>
+                            <p class="card-text ">La longitud de este Pokémon aumenta con el tiempo. Por la noche, se enrosca en las ramas de los árboles para descansar.</p>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Favorito</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Evoluciones</button>
+                              </div>
+              
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+        </main>
+     
+      
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">😡</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Te estan diciendo que no le piques y ahi vas y le picas 😡
+          Ahora arreglatelas para cerrar esto
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Cerrarx2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+            
+  <div>
+    <h3>Entrenadores Pokémon</h3>
+    <p><div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Ash Ketchum
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Ash es un entrenador Pokémon que junto con su Pokémon inicial Pikachu, obtenido de manos del profesor Oak en Pueblo Paleta, va recorriendo las regiones del mundo Pokémon con el objetivo de reunir las medallas de gimnasio necesarias para participar en una Liga Pokémon y ganarla, y así estar un paso más cerca de convertirse en un maestro Pokémon. En su camino también hay antagonistas como el Team/Equipo Rocket, quienes siempre van en busca de atrapar al Pikachu de Ash para llevárselo a su jefe.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Misty
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Misty (カスミ Kasumi en japonés) de Ciudad Celeste, fue una de las protagonistas de la serie de anime Pokémon. Viajó por Kanto, el Archipiélago Naranja y Johto junto a Ash, Brock y Tracey durante la serie original.
+
+                Actualmente es la líder del Gimnasio Celeste y una entrenadora de Pokémon de tipo agua. Sus hermanas son Daisy, Violet y Lily.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Brock
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Brock (タケシ Takeshi en japonés) de Ciudad Plateada, fue uno de los protagonistas de la serie del anime Pokémon. Viajó por Kanto, Johto, Hoenn y Sinnoh junto a Ash y otros personajes durante la mayoría del anime.
+
+                Es un criador Pokémon y un verdadero experto cocinero que siempre maravilla a los demás con sus platos. Antes de embarcarse en su aventura Pokémon, era el líder de gimnasio de Ciudad Plateada. Ahora está a cargo del gimnasio su hermano, Forrest. Su padre, y sus numerosos hermanos también se encuentran en Ciudad Plateada.
+                
+                Brock se separó definitivamente de Ash al terminar el viaje por la región de Sinnoh. Tuvo de compañeros a Misty, Max, May/Aura y Dawn/Maya. Estudió en Johto para convertirse en doctor Pokémon y actualmente trabaja en un Centro Pokémon de Ciudad Pirita.
+                Este contenido proviene de wikidex.net, y debe darse atribución a sus autores, tal como especifica la licencia.
+                Se prohíbe su uso a PlagioDex (el wiki de FANDOOM), por copiar reiteradamente sin dar atribución</div>
+          </div>
+        </div>
+      </div></p>
+  </div>
+    
+</body>
+
+<div class="container">
+    <footer class="pieletra d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-body-secondary">&copy; Página friki de Bety</p>
+      
+  
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      </a>
+  
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pokemones</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Agua</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Fuego</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Tierra</a></li>
+        
+      </ul>
+      
+    </footer>
+  </div>
+</section>
+</html>
